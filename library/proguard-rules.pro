@@ -21,7 +21,14 @@
 #-renamesourcefileattribute SourceFile
 
 -ignorewarnings
--keep class com.iris0511.device.utils.* {
+-keep class com.iris0513.device.utils.* {
     public <methods>;
 }
--repackageclasses com.iris0511.device.utils
+-assumenosideeffects class android.util.Log{
+    public static *** v(...);
+    public static *** i(...);
+    public static *** d(...);
+    public static *** w(...);
+    public static *** e(...);
+}
+-repackageclasses com.iris0513.device.utils
